@@ -1,0 +1,43 @@
+<resources>  
+  <style name="Transparent">  
+    <item name="android:windowBackground">
+       @color/transparent_background
+    </item>  
+    <item name="android:windowNoTitle">true</item>  
+    <item name="android:windowIsTranslucent">true</item>
+  </style>
+  <style name="text_keyboard">
+    <item name="android:layout_width">89dp</item>
+    <item name="android:layout_height">65dp</item>
+
+    <item name="android:textSize">20sp</item>
+    <item name="android:gravity">center</item>
+    <item name="android:textColor">@drawable/text_color_selector</item>
+    <item name="android:clickable">true</item>
+    <item name="android:focusable">true</item>
+    <item name="android:background">@drawable/number_keyboard_selecter</item>
+  </style>
+  <style name="number_keyboard">
+    <item name="android:layout_width">89dp</item>
+    <item name="android:layout_height">65dp</item>
+
+    <item name="android:textSize">20sp</item>
+    <item name="android:gravity">center</item>
+    <item name="android:textColor">@drawable/number_color_selector</item>
+    <item name="android:clickable">true</item>
+    <item name="android:focusable">true</item>
+    <item name="android:background">@drawable/number_keyboard_selecter</item>
+  </style>
+
+  <style name="number_keyboard2">
+    <item name="android:layout_width">89dp</item>
+    <item name="android:layout_height">65dp</item>
+
+    <item name="android:textSize">20sp</item>
+    <item name="android:gravity">center</item>
+    <item name="android:textColor">@drawable/number_color_selector</item>
+    <item name="android:clickable">true</item>
+    <item name="android:focusable">true</item>
+    <item name="android:background">@drawable/number_keyboard_selecter2</item>
+  </style>
+</resources>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        tools:ignore="MissingConstraints">
+        <com.example.view.AnnotateView
+            android:id="@+id/image_canvas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+        <Button
+            android:id="@+id/pen"
+            android:text="画线"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+        </Button>
+        <Button
+            android:id="@+id/erase"
+            android:text="橡皮擦"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/pen"
+            android:layout_marginStart="5dp"
+            android:layout_alignParentBottom="true"/>
+        <Button
+            android:id="@+id/clearScreen"
+            android:text="清屏"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/erase"
+            android:layout_marginStart="5dp"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+
+<!--    <com.example.view.AnnotateView-->
+<!--        android:id="@+id/image_canvas"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/pen"-->
+<!--        android:text="画线"-->
+<!--        android:textSize="20dp"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        tools:ignore="MissingConstraints">-->
+<!--    </Button>-->
+<!--    <Button-->
+<!--        android:id="@+id/erase"-->
+<!--        android:text="橡皮擦"-->
+<!--        android:textSize="20dp"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_toEndOf="@id/pen"-->
+<!--        android:layout_marginStart="5dp"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        tools:ignore="MissingConstraints" />-->
+<!--    <Button-->
+<!--        android:id="@+id/clearScreen"-->
+<!--        android:text="清屏"-->
+<!--        android:textSize="20dp"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_toEndOf="@id/erase"-->
+<!--        android:layout_marginStart="5dp"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

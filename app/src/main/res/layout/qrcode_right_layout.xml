@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="282dp"
+        android:orientation="vertical"
+        android:id="@+id/number_linearLayout"
+        android:visibility="gone"
+        android:background="@drawable/scan_qrcode_pwd_background"
+        android:layout_toStartOf="@+id/relativeLayout_right"
+
+       >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tx_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:maxLength="4"
+                android:text=""
+                android:textColor="#FF7C8797"
+                android:textSize="25sp" />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="65dp">
+
+            <TextView
+                android:id="@+id/number_1"
+                style="@style/number_keyboard2"
+
+                android:text="1" />
+
+            <TextView
+                android:id="@+id/number_2"
+
+                style="@style/number_keyboard2"
+                android:text="2" />
+
+            <TextView
+                android:id="@+id/number_3"
+
+                style="@style/number_keyboard2"
+                android:text="3" />
+            <TextView
+                android:id="@+id/number_0"
+
+                style="@style/number_keyboard"
+                android:text="0" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp">
+
+            <TextView
+                android:id="@+id/number_4"
+
+                style="@style/number_keyboard2"
+                android:text="4" />
+
+            <TextView
+                android:id="@+id/number_5"
+
+                style="@style/number_keyboard2"
+                android:text="5" />
+
+            <TextView
+                android:id="@+id/number_6"
+
+                style="@style/number_keyboard2"
+                android:text="6" />
+            <TextView
+                android:id="@+id/number_cancel"
+                style="@style/text_keyboard"
+
+                android:text="@string/cancel" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp">
+
+            <TextView
+                android:id="@+id/number_7"
+
+                style="@style/number_keyboard2"
+                android:text="7" />
+
+            <TextView
+                android:id="@+id/number_8"
+
+                style="@style/number_keyboard2"
+                android:text="8" />
+
+            <TextView
+                android:id="@+id/number_9"
+                android:textColor="@drawable/number_color_selector"
+                style="@style/number_keyboard2"
+                android:text="9" />
+            <TextView
+                android:id="@+id/number_ok"
+                style="@style/text_keyboard"
+
+                android:text="@string/code_ok" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_marginRight="@dimen/dimen48"
+        android:layout_width="308dp"
+        android:layout_height="282dp"
+        android:background="@drawable/scan_qrcode_right_background"
+        android:id="@+id/relativeLayout_right"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        >
+        <TextView
+            android:id="@+id/tx_network_tips"
+            android:layout_width="wrap_content"
+            android:textColor="@color/text_normal"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="@string/setting_qrcode_wan"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/share_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            />
+
+        <com.example.view.AlwaysMarqueeTextView
+            android:marqueeRepeatLimit="marquee_forever"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:id="@+id/share_warn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="@string/code"
+            android:textColor="@color/text_normal"
+            android:textSize="12sp"
+            android:visibility="gone"
+            android:layout_below="@+id/share_pic"
+            android:layout_centerHorizontal="true" />
+        <ProgressBar
+            android:id="@+id/two_ball"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_centerInParent="true"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/qrcode_back"
+            android:layout_marginLeft="15dp"
+
+            android:layout_marginTop="11dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="wrap_content"
+                android:layout_height="17dp"
+
+                android:src="@drawable/back_selector" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="17dp"
+                android:layout_alignBottom="@+id/imageView6"
+
+                android:layout_toEndOf="@+id/imageView6"
+                android:text="@string/code_return"
+                android:textColor="@drawable/textcolor_selector"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <Switch
+            android:id="@+id/qrcode_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="17dp"
+            android:drawablePadding="3dp"
+            android:thumb="@drawable/switch_btn"
+            android:track="@drawable/track"
+            android:switchMinWidth="27dp"
+            android:text="@string/code_encrypt"
+            android:textColor="#464F5D"
+            android:switchPadding="8dp"
+            android:textSize="12sp"
+            android:textOff=""
+            android:textOn=""
+            android:layout_marginTop="11dp"
+            android:layout_marginRight="11dp"
+            android:layout_alignParentEnd="true"
+            android:visibility="visible"/>
+
+        <ImageView
+            android:id="@+id/zoom_imageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignRight="@id/share_pic"
+            android:layout_alignBottom="@id/share_pic"
+            android:visibility="gone"
+            android:padding="5dp"
+            android:layout_marginRight="-35dp"
+            android:src="@drawable/zoom_selector" />
+    </RelativeLayout>
+
+    </RelativeLayout>
+
+

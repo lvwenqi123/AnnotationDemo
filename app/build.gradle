@@ -1,0 +1,90 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.example.annotateimages"
+        minSdkVersion 26
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        externalNativeBuild {
+            cmake {
+                cppFlags "-std=c++14"
+                abiFilters 'armeabi-v7a'
+                cppFlags "-DSIGN_APP=1"
+                cppFlags "-DSYS_9=1"
+                cppFlags "-DFRAME_BUF=1"
+                cppFlags "-DKJD_311D2=1"
+                arguments "-Dkjd311d2=true"
+            }
+        }
+    }
+
+    signingConfigs {
+        debug {
+            if (project.ext.targetSystem == 560) {
+                storeFile file("../app/signApk/560paint.jks")
+            } else if (project.ext.targetSystem == 'm7332' || project.ext.targetSystem == 'rp982') {
+                storeFile file("../app/signApk/board11.jks")
+            } else if (project.ext.targetSystem == 'd2') {
+                storeFile file("../app/signApk/966_android.jks")
+            }/* else if (project.ext.targetSystem == 848) {
+                storeFile file("../app/signApk/848-android.jks")
+            }
+            if (project.ext.targetSystem == 848) {
+                storePassword '848-android'
+                keyAlias '848-android'
+                keyPassword '848-android'
+            } else */
+            if (project.ext.targetSystem == 'm7332' || project.ext.targetSystem == 'rp982') {
+                storePassword 'iboard1218'
+                keyAlias 'iboard1218'
+                keyPassword 'iboard1218'
+            } else if (project.ext.targetSystem == 'd2') {
+                storePassword '966_android'
+                keyAlias '966_android'
+                keyPassword '966_android'
+            } else {
+                storePassword '123456'
+                keyAlias 'key0'
+                keyPassword '123456'
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    externalNativeBuild {
+        cmake {
+            path "src/main/cpp/CMakeLists.txt"
+            version "3.10.2"
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.14.2'
+    implementation 'com.google.zxing:core:3.3.3'
+}
