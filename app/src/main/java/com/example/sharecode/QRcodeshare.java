@@ -68,7 +68,6 @@ public class QRcodeshare implements View.OnClickListener {
     private String codeString = "";
     private boolean isReUpload = false;
     private boolean isReCreatMetting = false;
-    private int direction = 0;//左是0右是1
     //保存云端地址
     private final String SAVE_CLOUND_PATH = "/Picture/UploadPicture?region=";
     private final String CREATE_CLOUND_MEETING = "/ApiMeeting/CreateMeeting";
@@ -78,10 +77,9 @@ public class QRcodeshare implements View.OnClickListener {
     private Handler handler;
 
 
-    public QRcodeshare(View showView, Context context, String str, int direction) {
+    public QRcodeshare(View showView, Context context, String str) {
         this.showView = showView;
         mContext = context;
-        this.direction = direction;
         init();
         showShareCode(str);
     }
